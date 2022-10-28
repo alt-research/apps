@@ -6,8 +6,8 @@ import type { RuntimeVersion } from '@polkadot/types/interfaces';
 import React from 'react';
 import styled from 'styled-components';
 
-import { ChainImg, Icon } from '@polkadot/react-components';
-import { useApi, useCall, useIpfs, useToggle } from '@polkadot/react-hooks';
+import { ChainImg } from '@polkadot/react-components';
+import { useApi, useCall, useToggle } from '@polkadot/react-hooks';
 import { BestNumber, Chain } from '@polkadot/react-query';
 
 import Endpoints from '../Endpoints';
@@ -19,15 +19,12 @@ interface Props {
 function ChainInfo ({ className }: Props): React.ReactElement<Props> {
   const { api, isApiReady } = useApi();
   const runtimeVersion = useCall<RuntimeVersion>(isApiReady && api.rpc.state.subscribeRuntimeVersion);
-  const { ipnsChain } = useIpfs();
   const [isEndpointsVisible, toggleEndpoints] = useToggle();
-  const canToggle = !ipnsChain;
 
   return (
     <div className={className}>
       <div
-        className={`apps--SideBar-logo-inner${canToggle ? ' isClickable' : ''} highlight--color-contrast`}
-        onClick={toggleEndpoints}
+        className={'apps--SideBar-logo-inner highlight--color-contrast'}
       >
         <ChainImg />
         <div className='info media--1000'>
@@ -40,12 +37,6 @@ function ChainInfo ({ className }: Props): React.ReactElement<Props> {
             label='#'
           />
         </div>
-        {canToggle && (
-          <Icon
-            className='dropdown'
-            icon={isEndpointsVisible ? 'caret-right' : 'caret-down'}
-          />
-        )}
       </div>
       {isEndpointsVisible && (
         <Endpoints onClose={toggleEndpoints} />
