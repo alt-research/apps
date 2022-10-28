@@ -25,7 +25,7 @@ function Apps ({ className = '' }: Props): React.ReactElement<Props> {
 
   const uiHighlight = useMemo(
     () => isDevelopment
-      ? undefined
+      ? '#6667ab'
       : getSystemColor(systemChain, systemName, specName),
     [isDevelopment, specName, systemChain, systemName]
   );
