@@ -1,0 +1,41 @@
+/*!
+  Copyright (c) 2015 Jed Watson.
+  Based on code that is Copyright 2013-2015, Facebook, Inc.
+  All rights reserved.
+*/
+
+/*!
+* chartjs-plugin-annotation v2.1.0
+* https://www.chartjs.org/chartjs-plugin-annotation/index
+ * (c) 2022 chartjs-plugin-annotation Contributors
+ * Released under the MIT License
+ */
+
+/*! noble-secp256k1 - MIT License (c) 2019 Paul Miller (paulmillr.com) */
+
+/*! scure-base - MIT License (c) 2022 Paul Miller (paulmillr.com) */
+
+/**
+	 * A handy class to calculate color values.
+	 *
+	 * @version 1.0
+	 * @author Robert Eisele <robert@xarg.org>
+	 * @copyright Copyright (c) 2010, Robert Eisele
+	 * @link http://www.xarg.org/2010/03/generate-client-side-png-files-using-javascript/
+	 * @license http://www.opensource.org/licenses/bsd-license.php BSD License
+	 *
+	 */
+
+//!
+
+//! Exports a function that provides bindings for the Wasi interface.
+
+//! Exports a function that provides bindings for the bindings found in the Rust part of the code.
+
+//! In order to use this code, call the function passing an object, then fill the `instance` field
+
+//! See <https://wasi.dev/>.
+
+//! These bindings can then be used by the Wasm virtual machine to invoke Wasi-related functions.
+
+//! of that object with the Wasm instance.
